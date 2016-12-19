@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.mypromowebs.com/demosites/soloweb/index.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 21 Oct 2011 19:04:00 GMT -->
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/colorbox.css" type="text/css" media="screen">
+
+  <link rel="stylesheet" href="css/jquery.cluetip.css" type="text/css" /> 
+  
+  <script type="text/javascript" src="../../../ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js" ></script>
+  
+  <script src="js/jquery.colorbox.js"></script>
+  <script type="text/javascript" src="js/cufon-yui.js"></script>
+  <script type="text/javascript" src="js/cufon-replace.js"></script>  
+  <script type="text/javascript" src="js/Amaranth_400.font.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>  
+  <script type="text/javascript" src="js/scroll.js"></script>  
+  <script type="text/javascript" src="js/atooltip.jquery.js"></script>
+
+  <!--[if lt IE 9]>
+  	<script type="text/javascript" src="js/html5.js"></script>
+	<style type="text/css">
+		.bg{ behavior: url(js/PIE.htc); }
+	</style>
+  <![endif]-->
+	<!--[if lt IE 7]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
+		</div>
+	<![endif]-->
+	<script>
+		function onSuccess(data, status)
+			{
+				data = $.trim(data);
+				$("#result").text(data);
+			}
+	 
+		function onError(data, status)
+			{
+				$("#result").text("There was an error, please try again.");
+			}      
+			
+		$(document).ready(function(){
+		
+		$("#submit").click(function(){
+	 		var formData = $("#ContactForm").serialize();
+	 				$.ajax({
+						type: "POST",
+						url: "solowebs_process_form.php",
+						cache: false,
+						data: formData,
+						success: onSuccess,
+						error: onError
+					});
+	 
+					return false;
+			});
+		
+			$("a[rel='lightbox1']").colorbox();
+			
+			//Example of preserving a JavaScript event for inline calls.
+			$("#click").click(function(){ 
+				$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+				return false;
+			});
+		});
+    </script>
+</head>
+
+<body>
+<div class="extra">
+	<div id="page_2">
+		<div class="main">
+			<!--header -->
+			<header>
+				<h1><a href="#page_1">SoloWeb</a></h1>
+				<nav>
+					<ul class="menu">
+						<li class="active"><a href="#page_2">News</a></li>
+						<li><a href="#page_3">Services</a></li>
+						<li><a href="#page_4">Products</a></li>
+						<li><a href="#page_5">FAQ</a></li>
+						<li><a href="#page_6">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!--header end-->
+			<!--content -->
+			<section class="content">
+				<article class="col1">
+					<h2>Latest News &amp; Events</h2>
+					<div class="wrapper pad_bot1">
+					  <figure class="left marg_right1"><img src="images/page1_img1.jpg" alt=""></figure>
+						<p class="pad_bot1 pad_top1"><strong>Got news? Share it here! </strong></p>
+                      <p>Every business, big or small, has something to share. Products or services added or dropped, local writeups and upcoming sales...it's all news, and people thrive on news. Can't think of any updates? We'll send a reminder once a month with some ideas for updates. </p>
+				  </div>
+					<div class="wrapper">
+						<figure class="left marg_right1"><img src="images/page1_img2.jpg" alt=""></figure>
+						<p class="pad_bot1 pad_top1"><strong>SoloWeb is flexible!</strong></p>
+                        <p>SoloWeb is a very flexible little website. Rename sections, recolor the site to match your &quot;look&quot;, and rename the different sections to suit your unique businesses needs. Can't think of any good ideas? We can help. Can't write copy? We have professional copywriters on staff. All SoloWebs needs is you! </p>
+				  </div>
+        		</article>
+				<article class="col2 pad_left1">
+					<h2>Got News? </h2>
+					<ul class="list1">
+						<li><a class="load-local" title="Article" href="#faq10" rel="#faq1">Article</a></li>
+						<li><a class="load-local" title="Write-up" href="#faq10" rel="#faq2">Write-up</a></li>
+						<li><a class="load-local" title="Sale!" href="#faq10" rel="#faq3">Sale!</a></li>
+						<li><a class="load-local" title="New Product" href="#faq10" rel="#faq4">New Product</a></li>
+						<li><a class="load-local" title="New Service" href="#faq10" rel="#faq5">New Service</a></li>
+					</ul>
+				</article>
+			</section>
+			<!--content end-->
+		</div>
+		<div class="block"></div>
+	</div>
+</div>
+	<div class="main">
+			<!--footer -->
+			<footer>
+				<ul class="icons">
+					<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Delicious"><img src="images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Stumble Upon"><img src="images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon4.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Linkedin"><img src="images/icon5.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Reddit"><img src="images/icon6.jpg" alt=""></a></li>
+				</ul>
+			</footer>
+			<!--footer end-->
+	</div>
+<div class="extra">
+	<div id="page_3">
+		<div class="main">
+			<!--header -->
+			<header>
+				<h1><a href="#page_1">SoloWeb</a></h1>
+				<nav>
+					<ul class="menu">
+						<li><a href="#page_2">News</a></li>
+						<li class="active"><a href="#page_3">Services</a></li>
+						<li><a href="#page_4">Products</a></li>
+						<li><a href="#page_5">FAQ</a></li>
+						<li><a href="#page_6">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!--header end-->
+			<!--content -->
+			<section class="content">
+				<h2>Services Overview<a href="#"></a></h2>
+				<article class="col1">
+					<div class="wrapper pad_bot1">
+						<figure class="left marg_right1"><a href="#"><img src="images/page2_img3.png" alt=""></a></figure>
+						<p class="pad_bot1"><strong class="color1">Copywriting</strong></p>
+						<p>Can't write? We can. If you can chat about what you do and who you do it for, we can write about it. Let's get started! <a class="load-local" title="Copywriting" href="#faq10" rel="#faq6">TIP</a></p>
+					</div>
+					<div class="wrapper pad_bot1">
+						<figure class="left marg_right1"><a href="#"><img src="images/page2_img2.png" alt=""></a></figure>
+						<p class="pad_bot1"><strong class="color1">ToolTip Popups</strong></p>
+						<p>These neat little text popup windows are called ToolTips. They are handy for explanations and quick reminders. <a class="load-local" title="ToolTip Popus" href="#faq10" rel="#faq7">TIP</a> </p>
+					</div>
+					<div class="wrapper pad_bot1">
+						<figure class="left marg_right1"><a href="#"><img src="images/page2_img5.png" alt=""></a></figure>
+						<p class="pad_bot1"><strong class="color1">Brainstorming</strong></p>
+						<p><a href="#"></a>You have ideas for your site. You just can't seem to express them! Our Content Director will help plan and design your site. <a class="load-local" title="Brainstorming" href="#faq10" rel="#faq8">TIP</a></p>
+					</div>
+        		</article>
+				<article class="col1 pad_left1">
+					<div class="wrapper pad_bot1">
+						<figure class="left marg_right1"><a href="#"><img src="images/page2_img6.png" alt=""></a></figure>
+						<p class="pad_bot1"><strong class="color1">Social Media (Facebook)</strong></p>
+						<p><a href="#"></a>Bring your site to life with Facebook andTwitter. Offer coupons and other cool stuff. We'll show you how! <a class="load-local" title="Social Media (Facebook)" href="#faq11" rel="#faq9">TIP</a></p>
+					</div>
+					<div class="wrapper pad_bot1">
+						<figure class="left marg_right1"><a href="#"><img src="images/page2_img1.png" alt=""></a></figure>
+						<p class="pad_bot1"><strong class="color1">Got Google?</strong></p>
+						<p>All SoloWeb and SoloWeb Plus sites are optimized for search engines. Get found on Google! <a class="load-local" title="Got Google?" href="#faq10" rel="#faq10">TIP</a></p>
+					</div>
+					<div class="wrapper pad_bot1">
+						<figure class="left marg_right1"><a href="#"><img src="images/page2_img4.png" alt=""></a></figure>
+						<p class="pad_bot1"><strong class="color1">Ready in 30 days!</strong></p>
+						<p>All SoloWeb and SoloWeb Plus sites can be made ready for viewing online within 30 days. <a class="load-local" title="Ready in 30 days!" href="#faq10" rel="#faq11">TIP</a></p>
+					</div>
+        		</article>
+			</section>
+			<!--content end-->
+		</div>
+		<div class="block"></div>
+	</div>
+</div>
+	<div class="main">
+			<!--footer -->
+			<footer>
+				<ul class="icons">
+					<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Delicious"><img src="images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Stumble Upon"><img src="images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon4.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Linkedin"><img src="images/icon5.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Reddit"><img src="images/icon6.jpg" alt=""></a></li>
+				</ul>
+			</footer>
+			<!--footer end-->
+	</div>
+<div class="extra">
+	<div id="page_1">
+		<div class="main">
+			<!--header -->
+			<header>
+				<a href="index.html" id="logo">Business Quick. Smart. Effective</a>
+				<nav>
+					<ul id="menu">
+						<li class="nav1"><a href="#page_2">News</a></li>
+						<li class="nav2"><a href="#page_3">Services</a></li>
+						<li class="nav3"><a href="#page_4">Products</a></li>
+						<li class="nav4"><a href="#page_5">FAQ</a></li>
+						<li class="nav5"><a href="#page_6">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!--header end-->
+			<div class="inner_copy">More <a href="../../index.html">Website Templates</a> at TemplateMonster.com!</div>
+		</div>
+		<div class="block"></div>
+	</div>
+</div>
+	<div class="main">
+			<!--footer -->
+			<footer>
+				<ul class="icons">
+					<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Delicious"><img src="images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Stumble Upon"><img src="images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon4.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Linkedin"><img src="images/icon5.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Reddit"><img src="images/icon6.jpg" alt=""></a></li>
+				</ul>
+			</footer>
+			<!--footer end-->
+	</div>
+<div class="extra">
+	<div id="page_4">
+		<div class="main">
+			<!--header -->
+			<header>
+				<h1><a href="#page_1">SoloWeb</a></h1>
+				<nav>
+					<ul class="menu">
+						<li><a href="#page_2">News</a></li>
+						<li><a href="#page_3">Services</a></li>
+						<li class="active"><a href="#page_4">Products</a></li>
+						<li><a href="#page_5">FAQ</a></li>
+						<li><a href="#page_6">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!--header end-->
+            <!-- colorbox example
+            
+	<p><a href="../content/ohoopee1.jpg" rel="example1" title="Me and my grandfather on the Ohoopee.">Grouped Photo 1</a></p>
+    -->
+			<!--content -->
+			<section class="content">
+				<article class="col1">
+					<div class="wrapper pad_top1 pad_bot2">
+						<figure class="pad_bot3"><a href="images/owner_operator.jpg" rel="lightbox1" title="Captions can be used to describe your product or service."><img src="images/owner_operator_th.jpg" alt=""></a></figure>
+						<p class="pad_bot1"><strong class="font1">Owner-Operated Businesses</strong></p>
+						<p class="pad_bot3"></p>
+						<a href="#" class="button">read more</a>
+					</div>
+				  <div class="wrapper pad_top1 pad_bot2">
+						<figure class="pad_bot3"><a href="images/trades_persons.jpg" rel="lightbox1" title="Captions can be used to describe your product or service."><img src="images/trades_persons_th.jpg" alt=""></a></figure>
+					<p class="pad_bot1"><strong class="font1">Tradespersons</strong></p>
+					  <p class="pad_bot3"></p>
+					  <a href="#" class="button">read more</a>
+					</div>
+        		</article>
+				<article class="col1 pad_left1">
+					<div class="wrapper pad_top1 pad_bot2">
+						<figure class="pad_bot3"><a href="images/single_product_service.jpg" rel="lightbox1" title="Captions can be used to describe your product or service."><img src="images/single_product_service_th.jpg" alt=""></a></figure>
+						<p class="pad_bot1"><strong class="font1">Single Product/Single Service</strong></p>
+						<p class="pad_bot3"></p>
+						<a href="#" class="button">read more</a>
+					</div>
+					<div class="wrapper pad_top1 pad_bot2">
+						<figure class="pad_bot3"><a href="images/crafts_person.jpg" rel="lightbox1" title="Captions can be used to describe your product or service."><img src="images/crafts_person_th.jpg" alt=""></a></figure>
+						<p class="pad_bot1"><strong class="font1">Craftspersons</strong></p>
+						<p class="pad_bot3"></p>
+						<a href="#" class="button">read more</a>
+					</div>
+        		</article>
+				<article class="col1 pad_left1">
+					<div class="wrapper pad_top1 pad_bot2">
+						<figure class="pad_bot3"><a href="images/small_retail.jpg" rel="lightbox1" title="Captions can be used to describe your product or service."><img src="images/small_retail_th.jpg" alt=""></a></figure>
+						<p class="pad_bot1"><strong class="font1">Small Retail</strong></p>
+						<p class="pad_bot3"></p>
+						<a href="#" class="button">read more</a>
+					</div>
+					<div class="wrapper pad_top1 pad_bot2">
+						<figure class="pad_bot3"><a href="images/small_restaurant.jpg" rel="lightbox1" title="Captions can be used to describe your product or service."><img src="images/small_restaurant_th.jpg" alt=""></a></figure>
+						<p class="pad_bot1"><strong class="font1">Small Restaurant</strong></p>
+						<p class="pad_bot3"></p>
+						<a href="#" class="button">read more</a>
+					</div>
+        		</article>
+			</section>
+			<!--content end-->
+		</div>
+		<div class="block"></div>
+	</div>
+</div>
+	<div class="main">
+			<!--footer -->
+			<footer>
+				<ul class="icons">
+					<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Delicious"><img src="images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Stumble Upon"><img src="images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon4.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Linkedin"><img src="images/icon5.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Reddit"><img src="images/icon6.jpg" alt=""></a></li>
+				</ul>
+			</footer>
+			<!--footer end-->
+	</div>
+<div class="extra">
+	<div id="page_5">
+		<div class="main">
+			<!--header -->
+			<header>
+				<h1><a href="#page_1">SoloWeb</a></h1>
+				<nav>
+					<ul class="menu">
+						<li><a href="#page_2">News</a></li>
+						<li><a href="#page_3">Services</a></li>
+						<li><a href="#page_4">Products</a></li>
+						<li class="active"><a href="#page_5">FAQ</a></li>
+						<li><a href="#page_6">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!--header end-->
+			<!--content -->
+			<section class="content">
+				<div class="wrapper">
+					<p class="font1 pad_bot1 pad_top1"><strong>What is an FAQ?</strong></p>
+					<p>FAQ means Frequently-Asked Questions, and every industry has them. Today's consumer is savvy and cautious and shoppers have a lot of questions that they want answered before they become buyers. People really appreciate knowing that you are aware of their pre-purchase jitters and concerns. Answering anticipated questions up front puts buyers at ease, smoothing the way for an eventual purchase. Three questions is usually enough. </p>
+					<p class="font1 pad_bot1"><strong>Where do we get all the stuff that goes into a website?</strong></p>
+					<p>By 'stuff', you probably mean copy and images and such. Copy is the wording on the site, and we write that for you. Images are pictures and we get those from you or from the manufacturer of your product. If you do not have any digital or usable images, we'll give you a quote for a local photographer so you can have professional images made that you can use forevermore. We'll also need your logo. Don't have a logo? Ask our artist for a quote. </p>
+					<p class="font1 pad_bot1"><strong>Will we be found on Google?</strong></p>
+					<p>Getting found on Google is a function of SEO or Search Engine Optimization. We know Google and we've built SEO into every one of our websites so yes, you'll be found on Google. If you are marketing in a larger city or area or are in a very competitive industry and really value being ranked high on Google searches, we'll put you in touch with a professional SEO firm that can help you plan your search engine marketing program. </p>
+				</div>
+			</section>
+			<!--content end-->
+		</div>
+		<div class="block"></div>
+	</div>
+</div>
+	<div class="main">
+			<!--footer -->
+			<footer>
+				<ul class="icons">
+					<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Delicious"><img src="images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Stumble Upon"><img src="images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon4.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Linkedin"><img src="images/icon5.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Reddit"><img src="images/icon6.jpg" alt=""></a></li>
+				</ul>
+			</footer>
+<!--footer end-->
+	</div>
+<div class="extra2">
+	<div id="page_6">
+		<div class="main">
+			<!--header -->
+			<header>
+				<h1><a href="#page_1">SoloWeb</a></h1>
+				<nav>
+					<ul class="menu">
+						<li><a href="#page_2">News</a></li>
+						<li><a href="#page_3">Services</a></li>
+						<li><a href="#page_4">Products</a></li>
+						<li><a href="#page_5">FAQ</a></li>
+						<li class="active"><a href="#page_6">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!--header end-->
+			<!--content -->
+			<section class="content">
+				<article class="col1">
+					<h2>Miscellaneous Info</h2>
+					<p>This is a contact form which is used by your clients and site visitors to contact you for questions, comments and concerns. People like these a lot more than the single email link you usually find on websites. This feature is usually found on more expensive websites. </p>
+					<p>The results of this form are sent to your email, Blackberry or iPhone (or any other email-capable smartphone for that matter). This means a fast response, something else that people love! </p>
+        		</article>
+				<article class="col1 pad_left1">
+					<h2>Contact Form</h2>
+					
+					<form id="ContactForm" name="form1" method="post" action="http://www.mypromowebs.com/demosites/soloweb/solowebs_process_form.php">
+                        <input type="hidden" name="isAjax" id="isAjax" value="1" />
+							<div>
+								<div class="wrapper"><input class="input" name="name" type="text" value="Name:"  onblur="if(this.value=='') this.value='Name:'" onFocus="if(this.value =='Name:' ) this.value=''" ></div>
+								<div class="wrapper"><input class="input" name="email" type="text" value="Email:"  onblur="if(this.value=='') this.value='Email:'" onFocus="if(this.value =='Email:' ) this.value=''" ></div>
+								<div class="wrapper"><input class="input" name="fax" type="text" value="Fax:"  onblur="if(this.value=='') this.value='Fax:'" onFocus="if(this.value =='Fax:' ) this.value=''"></div>
+								<div class="textarea_box"><textarea cols="1" name="textarea" rows="1" onBlur="if(this.value=='') this.value='Message:'" onFocus="if(this.value =='Message:' ) this.value=''"  >Message:</textarea></div>
+								<a href="javascript:" class="button" onClick="document.getElementById('ContactForm').reset()">clear</a>
+								<a href="#" id="submit" class="button"><span class="shadow"></span>Send</a>
+								<!--<a href="javascript:" class="button" onClick="document.getElementById('ContactForm').submit()">send</a>-->
+							</div>
+					</form>
+        		</article>
+				<article class="col1 pad_left1">
+					<h2>Our Location</h2>
+					<p>PromoWebs 34334 Forrest Terrace, Abbotsford, BC, V2S 1G7</p>
+					<p> <span class="right"> 604-746-2777</span><strong class="color1">Phone:</strong><br>
+					  <span class="right"><a href="mailto:">questions@mypromowebs.com</a></span><strong class="color1">E-mail:</strong></p>
+					  
+						<h3><div id="result"></div></h3>
+					  
+        		</article>
+			</section>
+			<!--content end-->
+		</div>
+		<div class="block2"></div>
+	</div>
+</div>
+	<div class="main">
+			<!--footer -->
+			<footer class="footer_end">
+				<div class="wrapper">
+					<ul class="icons">
+						<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.jpg" alt=""></a></li>
+						<li><a href="#" class="normaltip" title="Delicious"><img src="images/icon2.jpg" alt=""></a></li>
+						<li><a href="#" class="normaltip" title="Stumble Upon"><img src="images/icon3.jpg" alt=""></a></li>
+						<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon4.jpg" alt=""></a></li>
+						<li><a href="#" class="normaltip" title="Linkedin"><img src="images/icon5.jpg" alt=""></a></li>
+						<li><a href="#" class="normaltip" title="Reddit"><img src="images/icon6.jpg" alt=""></a></li>
+					</ul>
+				</div>
+				Designed by TemplateMonster. Offered by <a href="../../index.html">PromoWebs</a>. This is a &quot;SoloWeb Plus&quot; $995</footer>
+			<!--footer end-->
+	</div>
+	
+		<div id="faq1"><p>Have you written a new article or blog? Tell your site visitors here!</p></div>
+	<div id="faq2"><p>Were you written up locally? Use this section to present the write-up!</p></div>
+	<div id="faq3"><p>Got a sale coming up? Let your visitors know!</p></div>
+	<div id="faq4"><p>Adding or removing a product line? Put it here!</p></div>
+	<div id="faq5"><p>Adding or removing a product line? Put it here!</p></div>
+	<div id="faq6"><p>This is a ToolTip. When you roll your mouse over it, it pops up a little window where you can share information, define a term or offer an explanation.  Got an idea for your ToolTip? Show it to your PromoWebs representative!</p></div>
+	<div id="faq7"><p>This is a ToolTip. When you roll your mouse over it, it pops up a little window where you can share information, define a term or offer an explanation.  Got an idea for your ToolTip? Show it to your PromoWebs representative!</p></div>
+	<div id="faq8"><p>This is a ToolTip. When you roll your mouse over it, it pops up a little window where you can share information, define a term or offer an explanation.  Got an idea for your ToolTip? Show it to your PromoWebs representative!</p></div>
+	<div id="faq9"><p>This is a ToolTip. When you roll your mouse over it, it pops up a little window where you can share information, define a term or offer an explanation.  Got an idea for your ToolTip? Show it to your PromoWebs representative!</p></div>
+	<div id="faq10"><p>This is a ToolTip. When you roll your mouse over it, it pops up a little window where you can share information, define a term or offer an explanation.  Got an idea for your ToolTip? Show it to your PromoWebs representative!</p></div>
+	<div id="faq11"><p>This is a ToolTip. When you roll your mouse over it, it pops up a little window where you can share information, define a term or offer an explanation.  Got an idea for your ToolTip? Show it to your PromoWebs representative!</p></div>
+	
+   <script type="text/javascript"> Cufon.now(); </script>
+   
+   <script src="js/jquery.cluetip.js" type="text/javascript"></script> 
+   <script src="js/cluetip.js" type="text/javascript"></script> 
+	
+</body>
+
+<!-- Mirrored from www.mypromowebs.com/demosites/soloweb/index.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 21 Oct 2011 19:04:46 GMT -->
+</html>

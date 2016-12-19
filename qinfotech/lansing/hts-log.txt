@@ -1,0 +1,33 @@
+HTTrack3.44-1+htsswf+htsjava launched on Sun, 20 Oct 2013 20:31:16 at http://themeforest.unitedthemes.com/?theme=lansing +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2010], %s -->" -%l "en, en, *" http://themeforest.unitedthemes.com/?theme=lansing -O1 C:\landingpages\lansing +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+20:31:16	Warning: 	File not parsed, looks like binary: themeforest.unitedthemes.com/robots.txt
+20:32:38	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/images/products/arcadiawp.jpg (from themeforest.unitedthemes.com/?theme=lansing)
+20:32:45	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/images/products/biscayne.jpg (from themeforest.unitedthemes.com/?theme=lansing)
+20:32:48	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/css/font/RobotoCondensed-Light-webfont.eot (from themeforest.unitedthemes.com/style.css)
+20:34:55	Error: 	"Not Found" (404) at link themeforest.unitedthemes.com/themes/lansing/blue/images/arrow-left.png (from themeforest.unitedthemes.com/themes/lansing/blue/css/flexslider.css)
+20:34:55	Error: 	"Not Found" (404) at link themeforest.unitedthemes.com/themes/lansing/blue/images/arrow-right.png (from themeforest.unitedthemes.com/themes/lansing/blue/css/flexslider.css)
+20:35:04	Error: 	"Not Found" (404) at link themeforest.unitedthemes.com/themes/lansing/green/images/arrow-left.png (from themeforest.unitedthemes.com/themes/lansing/green/css/flexslider.css)
+20:35:04	Error: 	"Not Found" (404) at link themeforest.unitedthemes.com/themes/lansing/green/images/arrow-right.png (from themeforest.unitedthemes.com/themes/lansing/green/css/flexslider.css)
+20:35:41	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/rose/index.htm (from themeforest.unitedthemes.com/themes/lansing/rose/)
+20:35:50	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/rose/js/jquery.fitvids.js (from themeforest.unitedthemes.com/themes/lansing/rose/)
+20:35:50	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/rose/css/fonts/Roboto-Thin-webfont.eot (from themeforest.unitedthemes.com/themes/lansing/rose/css/ut-fontface.css)
+20:36:04	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/blue/images/apple-touch-icon.png (from themeforest.unitedthemes.com/themes/lansing/blue/)
+20:36:07	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/blue/js/jquery.parallax.min.js (from themeforest.unitedthemes.com/themes/lansing/blue/)
+20:36:22	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/green/images/slide-2.jpg (from themeforest.unitedthemes.com/themes/lansing/green/)
+20:36:24	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/green/js/jquery.custom.js (from themeforest.unitedthemes.com/themes/lansing/green/)
+20:36:27	Error: 	"Not Found" (404) at link themeforest.unitedthemes.com/themes/lansing/yellow/images/arrow-left.png (from themeforest.unitedthemes.com/themes/lansing/yellow/css/flexslider.css)
+20:36:27	Error: 	"Not Found" (404) at link themeforest.unitedthemes.com/themes/lansing/yellow/images/arrow-right.png (from themeforest.unitedthemes.com/themes/lansing/yellow/css/flexslider.css)
+20:36:41	Error: 	"Connect Error" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/blue/css/fonts/Roboto-Regular-webfont.woff (from themeforest.unitedthemes.com/themes/lansing/blue/css/ut-fontface.css)
+20:36:44	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/green/css/fonts/Roboto-Regular-webfont.svg (from themeforest.unitedthemes.com/themes/lansing/green/css/ut-fontface.css)
+20:36:46	Error: 	"Connect Error" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/green/css/fonts/flexslider-icon.eot (from themeforest.unitedthemes.com/themes/lansing/green/css/flexslider.css)
+20:36:57	Error: 	"No data (connection closed)" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/yellow/js/jquery.parallax.min.js (from themeforest.unitedthemes.com/themes/lansing/yellow/)
+20:36:58	Error: 	"Connect Error" (-4) after 2 retries at link themeforest.unitedthemes.com/themes/lansing/yellow/css/fonts/Roboto-Light-webfont.eot (from themeforest.unitedthemes.com/themes/lansing/yellow/css/ut-fontface.css)
+
+HTTrack Website Copier/3.44-1 mirror complete in 5 minutes 44 seconds : 407 links scanned, 249 files written (9528195 bytes overall) [8714742 bytes received at 25333 bytes/sec], 1366600 bytes transfered using HTTP compression in 84 files, ratio 25%, 2.5 requests per connection
+(21 errors, 1 warnings, 0 messages)

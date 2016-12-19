@@ -1,0 +1,45 @@
+.mod_events_table {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: #000000 1px solid; WIDTH: 140px; BORDER-BOTTOM: #000000 1px solid; TEXT-ALIGN: center
+}
+.mod_events_td_title {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-STYLE: normal; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.mod_events_td_dayname {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: black; FONT-STYLE: normal; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.mod_events_td_dayoutofmonth {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: gray; FONT-STYLE: normal; FONT-FAMILY: Arial; BACKGROUND-COLOR: #ffe4c4; TEXT-DECORATION: none
+}
+.mod_events_td_todaynoevents {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: black; FONT-STYLE: normal; FONT-FAMILY: Arial; BACKGROUND-COLOR: #ffa07a; TEXT-DECORATION: none
+}
+.mod_events_td_todaywithevents {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: black; FONT-STYLE: normal; FONT-FAMILY: Arial; BACKGROUND-COLOR: #b0c4de; TEXT-DECORATION: none
+}
+.mod_events_td_daynoevents {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: black; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.mod_events_td_daywithevents {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: black; FONT-STYLE: normal; FONT-FAMILY: Arial; BACKGROUND-COLOR: #b0c4de; TEXT-DECORATION: none
+}
+A.mod_events_daylink:link {
+	FONT-SIZE: 12px; COLOR: black; FONT-FAMILY: Arial
+}
+A.mod_events_daylink:visited {
+	FONT-SIZE: 12px; COLOR: navy; FONT-FAMILY: Verdana
+}
+A.mod_events_daylink:hover {
+	FONT-SIZE: 12px; COLOR: silver; FONT-FAMILY: Arial
+}
+.mod_events_td_link {
+	BACKGROUND-COLOR: background
+}
+A.mod_events_link:link {
+	FONT-SIZE: 12px; COLOR: black; FONT-FAMILY: Arial
+}
+A.mod_events_link:visited {
+	FONT-SIZE: 12px; COLOR: navy; FONT-FAMILY: Arial
+}
+A.mod_events_link:hover {
+	FONT-SIZE: 12px; COLOR: silver; FONT-FAMILY: Arial
+}

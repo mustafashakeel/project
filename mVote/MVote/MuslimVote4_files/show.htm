@@ -1,0 +1,70 @@
+type = "1";
+function GetResults(frm, voted,unum,group,qqid)
+{
+    var answer = "";
+    if (voted == 1)
+    {
+        if (type == "1")
+        {
+            // Radio buttons
+            for (var i=0; i<frm.elements.length; i++)
+            {
+                if (frm.elements[i].type == "radio")
+                {
+                    if (frm.elements[i].checked)
+                    {
+                        answer = "&aid="+frm.elements[i].value;
+                    }
+                }
+            }
+        }
+        else if (type == "2")
+        {
+            // Check boxes
+            for (var i=0; i<frm.elements.length; i++)
+            {
+                if (frm.elements[i].type == "checkbox")
+                {
+                    if (frm.elements[i].checked)
+                    {
+                        answer += "&aid[]="+frm.elements[i].value;
+                    }
+                }
+            }
+        }
+        else if (type == "3" || type == "4")
+        {
+            if (frm.answer.selectedIndex != 0)
+            {
+                answer = "&aid="+frm.answer.options[frm.answer.selectedIndex].value;
+            }
+        }
+    }
+
+    if (answer == "")
+    {
+        voted = "0";
+    }
+    if (document.all)
+    {
+        window.open("http://pub"+group+".bravenet.com/minipoll/results.php?usernum="+unum+"&qid="+qqid+answer+"&voted="+voted, "resultswin", "width=600,height=500, top="+((screen.height/2) - 200)+", left="+((screen.width/2) - 250)+", directories=no, toolbars=no, statusbar=no, scrollbars=yes,location=no, menubar=no");
+    }
+    else
+    {
+        POPUP = window.open("http://pub"+group+".bravenet.com/minipoll/results.php?usernum="+unum+"&qid="+qqid+answer+"&voted="+voted, "resultswin", "width=600,height=500,directories=no, scrollbars=yes, toolbars=no, statusbar=no, location=no, menubar=no");
+        POPUP.moveTo(Math.round(((screen.width/2) - 250)), Math.round(((screen.height/2) - 200)));
+    }
+
+    return false;
+}
+document.write("<form name=\"pollform40\"  onSubmit=\"return GetResults(this, 1,2276444231,27,20399);\">");
+document.write("<table width=\"150px\" border=\"0\" cellpadding=\"1\" cellspacing=\"0\" bgcolor=\"#000000\">");
+document.write("<tr><td><table width=\"100%\" border=\"0\" cellpadding=\"2\" cellspacing=\"1\">");
+document.write("<tr><td bgcolor=\"#6592BA\" align=\"center\" style=\"font: 16px Tahoma; color: #ffffff; font-weight: bold; font-style: normal; text-decoration: none;\">");
+document.write("Elections Poll");
+document.write("</td></tr>");
+
+document.write("<tr><td align=\"center\"  style=\"padding: 10px 5px; font: 12px Tahoma; color: #000000; font-weight: normal; font-style: normal; text-decoration: none;; text-align: left; background-color: #ffffff\">Which Toronto Mayor do you support?");
+document.write("<div style=\"text-align: left; padding: 2px;\"><input type=\"radio\" name=\"answer\" style=\"border: 0px;\" value=\"179113\">David Miller<BR><input type=\"radio\" name=\"answer\" style=\"border: 0px;\" value=\"179114\">Barbara Hall<BR><input type=\"radio\" name=\"answer\" style=\"border: 0px;\" value=\"179115\">Tom Jakobek<BR><input type=\"radio\" name=\"answer\" style=\"border: 0px;\" value=\"179116\">John Tory<BR><input type=\"radio\" name=\"answer\" style=\"border: 0px;\" value=\"179117\">John Nunziata<BR><input type=\"radio\" name=\"answer\" style=\"border: 0px;\" value=\"179118\">Ahmad Shehab<BR><input type=\"radio\" name=\"answer\" style=\"border: 0px;\" value=\"179119\">Mehmet Yagiz<BR><input type=\"radio\" name=\"answer\" style=\"border: 0px;\" value=\"179120\">Hashmat Safi<BR><input type=\"radio\" name=\"answer\" style=\"border: 0px;\" value=\"179121\">Monowar Hossain<BR></div>");
+document.write("</div><div align=\"center\" style=\"margin-top: 10px; margin-bottom: 10px;\"><input type=\"submit\" name=\"submit\" value=\" Vote Now! \" /></div><div align=\"center\"><a style=\"font:12px Tahoma; color:#6592BA\" href=\"javascript:void(0)\" onClick=\"return GetResults(window.document.pollform40, 0,2276444231,27,20399);\">View Stats</a></div><br />");document.write("<div align=\"center\"><img src=\"http://images.bravenet.com/bravenet/images/poweredby.gif\" border=\"0\" align=\"absmiddle\" alt=\"Powered by Bravenet\" /><a style=\"font: 10px tahoma,arial;  text-decoration: none;\" href=\"http://www.bravenet.com/\" target=\"_new\"><b>Bravenet</b></a></div></td></tr>");document.write("</table></td></tr>");
+document.write("</table></form>");

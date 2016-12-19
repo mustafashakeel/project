@@ -1,0 +1,40 @@
+
+Dear Mustafa Quraishi,
+
+Thank you for subscribing to Rediff Business Solutions.
+
+Your request for the Hosting Solution Package linked to your domain name muslimvote.in has been activated.
+
+Do I need to update my Name Server to host my website?
+If you've not purchased your Domain Name from Rediff, you will need to contact your registrar in order to host your website and manage your domain through Rediff Business Solutions. Please contact your registrar to update your name server with the following details:
+ns.rediffmailpro.com. 
+ns2.rediffmailpro.com.
+
+How do I upload and manage my website?
+You can use any FTP client to upload your website. However Rediff Business Solutions gives you access to Ensim which has a detailed step-by-step guide on anything and everything you need to know about hosting and managing your website. Following is your FTP access to upload your website:
+
+FTP host : ftp.muslimvote.in
+FTP username : ar112556@112556musl
+FTP password : mustafashakeel 
+
+Note : FTP access is possible 48 hours after your domain is provisioned. 
+The Hosting Control Panel (from Ensim) allows you to track web statistics, manage your site storage space and do much more.
+
+Hosting Control Panel (Ensim) : https://202.54.124.137/admin/login/Login.aspx
+Hosting Control Panel username (Ensim) : ar112556@112556musl
+Hosting Control Panel password (Ensim) : mustafashakeel 
+
+How do I access my Rediff Business Solutions account?
+To access your Rediff Business Solutions account click here. (Please use the username and password with which you registered at the time of purchase.) 
+
+In case you are moving your existing website from a current Service provider to Rediff servers, you need to take the following steps: 
+
+1) Upload your website content as indicated above. 
+
+2) Change the A records with your current Domain registration provider as under: 
+
+ @  A  IN  202.54.124.137  
+ www  A  IN  202.54.124.137  
+ ftp  A  IN  202.54.124.137  
+
+For any assistance and to further augment your service, you can get in touch with our local area Business Associates or call 022 28595044

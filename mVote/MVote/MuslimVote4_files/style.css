@@ -1,0 +1,69 @@
+A {
+	COLOR: #6592ba; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #8e938d; TEXT-DECORATION: underline
+}
+A.alt2 {
+	COLOR: #677f35; TEXT-DECORATION: none
+}
+A.alt2:hover {
+	COLOR: #add656; TEXT-DECORATION: underline
+}
+.ttl {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #6592ba
+}
+H5 {
+	FONT-WEIGHT: bold; COLOR: #6592ba
+}
+H6 {
+	FONT-SIZE: 18px; COLOR: #878986
+}
+UL {
+	line-spacing: 22px
+}
+.BodyTextSm {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: helvetica, arial, sans-serif
+}
+.BodyTextSmB {
+	FONT-SIZE: 11px; COLOR: #6592ba; FONT-FAMILY: helvetica, arial, sans-serif
+}
+.FormLabels {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: helvetica, arial, sans-serif
+}
+.Input {
+	FONT-SIZE: 11px; WIDTH: 100px; COLOR: #000000; FONT-FAMILY: helvetica,  arial, sans-serif; BACKGROUND-COLOR: #edeee6
+}
+.Select {
+	FONT-SIZE: 11px; WIDTH: 333px; COLOR: #000000; FONT-FAMILY: helvetica, arial,  sans-serif; BACKGROUND-COLOR: #e54e80
+}
+.Textarea {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: black; FONT-FAMILY: helvetica, arial, sans-serif
+}
+.list {
+	FONT-SIZE: 11px
+}
+BODY {
+	FONT-SIZE: 13px; FONT-FAMILY: arial
+}
+TD {
+	FONT-SIZE: 13px; FONT-FAMILY: arial
+}
+.tdwhite {
+	FONT-SIZE: 13px; FONT-FAMILY: arial; BACKGROUND-COLOR: #ffffff
+}
+.td1 {
+	FONT-SIZE: 13px; FONT-FAMILY: arial; BACKGROUND-COLOR: #f5f5ba
+}
+.td2 {
+	FONT-SIZE: 13px; FONT-FAMILY: arial; BACKGROUND-COLOR: #fbfbe8
+}
+.td3 {
+	FONT-SIZE: 13px; FONT-FAMILY: arial; BACKGROUND-COLOR: #edeee6
+}
+.td4 {
+	FONT-SIZE: 13px; FONT-FAMILY: arial; BACKGROUND-COLOR: #a4a4d4
+}
+.Input2 {
+	FONT-SIZE: 11px; FONT-FAMILY: helvetica,  arial, sans-serif
+}

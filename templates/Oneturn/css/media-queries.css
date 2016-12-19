@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/* ============================== */
+/* 
+	- Title: 
+	- Autor: Coralix Themes
+	- Version: 1.0
+*/
+/* ============================== */
+
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 1024px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 1024px) {	
+	
+	.topbar .info, .topbar ul {
+		text-align: center;
+	}
+
+	.jumbotron {
+		padding-top: 400px;
+	}
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 768px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 768px) {	
+
+	.topbar .social-stuff {
+		margin: 0 auto;
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	.topbar .social-stuff iframe {
+		margin: 0 auto;
+		float: none;
+	}
+
+	.topbar form {
+	    float: none;
+	    line-height: 5em;
+	    text-align: center;
+	    width: 100%;
+	}
+
+	.topbar form .btn {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+
+	.jumbotron {
+    	padding-top: 250px;
+	}
+
+	.title h1 {
+		line-height: 1.3em;
+	}
+
+	.features .item {
+		margin-bottom: 50px;
+	}
+
+	.space img {
+		width: 100%;
+	}
+
+	.three-tables .pricing-table {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.infoitem div {
+		margin-bottom: 50px;
+	}
+	
+	.logos ul li {
+		margin-bottom: 50px;
+	}
+
+	.teffect {
+		margin-bottom: 50px;
+	}
+
+	.action h3  {
+		line-height: 1.5em;
+		text-align: center;
+	}
+
+	.action a {
+		float: none!important;
+		display: block;
+		margin: 130px auto 0 auto;
+		width: 80%;
+	}
+
+}	
+
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 480px
+ /* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 480px) {
+	
+	.generic {
+		padding: 80px 10px;
+	}
+
+	.jumbotron {
+    	padding-top: 160px;
+	}
+
+	.jumbotron h1 {
+		font-size: 1em;
+		line-height: 1.3em;
+    	margin-bottom: 20px;
+	}
+
+	.jumbotron h2{
+		font-size: 0.8em;
+		line-height: 1.8em;
+	}
+
+	.infoitem {
+    	margin: 40px 0;
+	}
+
+	.action h3  {
+		 font-size: 1.6em;
+    	line-height: 1.5em;
+    	text-align: center;
+	}
+
+	.action a {
+		display: block;
+	    float: none !important;
+	    font-size: 1.4em;
+	    margin: 75px auto 0;
+	    width: 80%;
+	}
+
+}

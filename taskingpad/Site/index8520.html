@@ -1,0 +1,393 @@
+
+    <!DOCTYPE html>
+    <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+    <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+    <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+    
+<!-- Mirrored from themeforest.unitedthemes.com/?theme=lansing by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 21 Oct 2013 03:31:17 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>United Themes : Lansing</title>
+    
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="css/font-awesome.css">
+     
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+        
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script >
+    
+        var theme_list_open=false;
+        
+            $(document).ready(function(){
+            
+			function e(){
+				var e=$("#switcher").height();
+				$("#iframe").attr("height", $(window).height()-e+"px" )
+			}
+			
+            IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
+            
+			$(window).resize(function(){e()}).resize();
+                
+				$("#theme_select").click(function(event){
+				
+					if(theme_list_open==true){
+                		$(".center ul li ul").slideUp('fast');
+						theme_list_open=false;
+					} else {
+                		$(".center ul li ul").slideDown('fast');
+						theme_list_open=true;
+					}
+				
+					event.preventDefault();
+				
+				});
+						
+                $("#theme_list ul li a").click(function(event){
+					
+					var purchase = $(this).data('themeforest'),
+						themeurl = $(this).data('fullscreen'),
+						themeID  = $(this).data('theme');
+                	
+					$("li.purchase a").attr("href", purchase );
+                	$("li.remove_frame a").attr("href", themeurl );
+                	$("#iframe").attr("src", themeurl );
+                	
+					window.location.href = "?theme=" + themeID + "";
+    
+                	$("li.close a").attr("src", themeurl );
+					
+                	$("#theme_list a#theme_select").text($(this).data('themename'));
+                    $(".center ul li ul").hide();
+					
+					theme_list_open = false;
+					event.preventDefault();
+				
+				});
+                            
+                $("#header-bar").hide();
+				
+				clicked = "desktop";
+				
+				var t= { desktop:"100%",
+						 tabletlandscape:1040,
+						 tabletportrait:788,
+						 mobilelandscape:500,
+						 mobileportrait:340,
+						 placebo:0
+						
+				};
+				
+				$(".responsive a").on("click",function(event){
+					
+					var e = jQuery(this);
+					
+					for(device in t){
+						
+						console.log(device);
+						console.log(t[device]);
+						
+						if(e.hasClass(device)){
+							
+							clicked=device;
+							
+							$("#iframe").width(t[device]);
+							if(clicked == device){
+								jQuery(".responsive a").removeClass("active");
+								e.addClass("active");
+							}
+						}
+					}
+				
+				event.preventDefault();
+				
+				});
+				
+				if(IS_IPAD){ $("#iframe").css("padding-bottom","60px") }
+			
+			});
+    </script>
+     
+        </head>
+    
+    <body>
+    
+        <div id="switcher">
+            
+            <div class="center">
+                    
+                    <div class="logo">
+                        <a href="http://unitedthemes.com/" target="_blank" title="Handcrafted High Quality Premium WordPress Themes"><img src="images/ut_logo_white.png" /> </a></h2>
+                    </div>
+                
+                    <div class="responsive">
+                        <a href="#" class="desktop active" title="View Desktop Version"><i class="icon-desktop icon-large"></i></a> 
+                        <a href="#" class="tabletlandscape" title="View Tablet Landscape (1024x768)"><i class="icon-tablet icon-rotate-90 icon-large"></i></a> 
+                        <a href="#" class="tabletportrait" title="View Tablet Portrait (768x1024)"><i class="icon-tablet icon-large"></i></a> 
+                        <a href="#" class="mobilelandscape" title="View Mobile Landscape (480x320)"><i class="icon-mobile-phone icon-rotate-90 icon-large"></i></a>
+                        <a href="#" class="mobileportrait" title="View Mobile Portrait (320x480)"><i class="icon-mobile-phone icon-large"></i></a>
+                    </div>
+                    
+                    <ul class="links">
+                        
+                        <li class="purchase" rel="http://themeforest.net/item/lansing-app-and-landing-page/5683041?ref=unitedthemes">
+                            <a href="http://themeforest.net/item/lansing-app-and-landing-page/5683041?ref=unitedthemes"><i class="icon-shopping-cart"></i> <span>Purchase</span></a>
+                        </li>		
+                        
+                        <li class="close" rel="http://themeforest.unitedthemes.com/themes/lansing/rose/">
+                            <a href="themes/lansing/rose/index.html"><i class="icon-chevron-sign-up"></i> <span>Close</span></a>
+                        </li>		
+                        
+                    </ul>
+                    
+                    <ul class="theme-selector">
+                    	<li id="theme_list">
+                            
+                            <a id="theme_select" href="#">
+                                Lansing                                <i class="icon-angle-down"></i>
+                            </a>
+                            
+                            <ul>
+							
+							                            
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Delaware" data-fullscreen="http://themeforest.unitedthemes.com/wpversions/delaware/" data-theme="delawarewp" data-themeforest="http://themeforest.net/item/delaware-responsive-retina-wordpress-theme/5159626?ref=unitedthemes">
+                            		Delaware                                    <span class="wordpress-tag">WordPress</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/delawarewp.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Nebraska" data-fullscreen="http://themeforest.unitedthemes.com/wpversions/nebraska/1/" data-theme="nebraskawp" data-themeforest="http://themeforest.net/item/nebraska-responsive-multipurpose-theme/3885811?ref=unitedthemes">
+                            		Nebraska                                    <span class="wordpress-tag">WordPress</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/nebraskawp.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Nevada" data-fullscreen="http://themeforest.unitedthemes.com/wpversions/nevada/" data-theme="nevadawp" data-themeforest="http://themeforest.net/item/nevada-responsive-multipurpose-theme/3087951?ref=unitedthemes">
+                            		Nevada                                    <span class="wordpress-tag">WordPress</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/nevadawp.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Melrose" data-fullscreen="http://themeforest.unitedthemes.com/wpversions/melrose/" data-theme="melrosewp" data-themeforest="http://themeforest.net/item/melrose-responsive-portfolio-wordpress-theme/2994091?ref=unitedthemes">
+                            		Melrose                                    <span class="wordpress-tag">WordPress</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/melrosewp.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Aries" data-fullscreen="http://themeforest.unitedthemes.com/wpversions/aries/" data-theme="arieswp" data-themeforest="http://themeforest.net/item/aries-responsive-business-wordpress-theme/2657035?ref=unitedthemes">
+                            		Aries                                    <span class="wordpress-tag">WordPress</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/arieswp.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Passion" data-fullscreen="http://themeforest.unitedthemes.com/wpversions/passion/" data-theme="passionwp" data-themeforest="http://themeforest.net/item/passion-reloaded-responsive-wordpress-theme/2550867?ref=unitedthemes">
+                            		Passion                                    <span class="wordpress-tag">WordPress</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/passionwp.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Arcadia" data-fullscreen="http://themeforest.unitedthemes.com/wpversions/arcadia/" data-theme="arcadiawp" data-themeforest="http://themeforest.net/item/arcadia-responsive-wordpress-blog/1944474?ref=unitedthemes">
+                            		Arcadia                                    <span class="wordpress-tag">WordPress</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/arcadiawp.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Ruskin" data-fullscreen="http://themeforest.unitedthemes.com/wpversions/ruskin/" data-theme="ruskinwp" data-themeforest="http://themeforest.net/item/ruskin-responsive-wordpress-theme/1781770?ref=unitedthemes">
+                            		Ruskin                                    <span class="wordpress-tag">WordPress</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/ruskinwp.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Strange" data-fullscreen="http://themeforest.unitedthemes.com/wpversions/strange2/" data-theme="strangewp" data-themeforest="http://themeforest.net/item/strange-modern-portfolio-wordpress-theme/537711?ref=unitedthemes">
+                            		Strange                                    <span class="wordpress-tag">WordPress</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/strangewp.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="GoGreen" data-fullscreen="http://themeforest.unitedthemes.com/wpversions/gogreen/" data-theme="gogreenwp" data-themeforest="http://themeforest.net/item/go-green-modern-business-portfolio-wp-theme/757676?ref=unitedthemes">
+                            		GoGreen                                    <span class="wordpress-tag">WordPress</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/gogreenwp.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Brooklyn" data-fullscreen="http://themeforest.unitedthemes.com/themes/brooklyn/yellow/" data-theme="brooklyn" data-themeforest="http://themeforest.net/item/brooklyn-creative-portfolio-page-html/5825007?ref=unitedthemes">
+                            		Brooklyn                                    <span class="html-tag">HTML</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/brooklyn.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Trenton" data-fullscreen="http://themeforest.unitedthemes.com/themes/trenton/yellow/" data-theme="trenton" data-themeforest="http://themeforest.net/item/trenton-app-starter-landing-page/5729131?ref=unitedthemes">
+                            		Trenton                                    <span class="html-tag">HTML</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/trenton.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Lansing" data-fullscreen="http://themeforest.unitedthemes.com/themes/lansing/rose/" data-theme="lansing" data-themeforest="http://themeforest.net/item/lansing-app-and-landing-page/5683041?ref=unitedthemes">
+                            		Lansing                                    <span class="html-tag">HTML</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/lansing.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Nevada" data-fullscreen="http://themeforest.unitedthemes.com/themes/nevada/" data-theme="nevadahtml" data-themeforest="http://themeforest.net/item/nevada-responsive-html-template/4628282?ref=unitedthemes">
+                            		Nevada                                    <span class="html-tag">HTML</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/nevada.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Biscayne" data-fullscreen="http://themeforest.unitedthemes.com/themes/biscayne/" data-theme="biscayne" data-themeforest="http://themeforest.net/item/biscayne-modern-business-html-template/1274572?ref=unitedthemes">
+                            		Biscayne                                    <span class="html-tag">HTML</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/biscayne.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Passion" data-fullscreen="http://themeforest.unitedthemes.com/themes/passion/" data-theme="passion" data-themeforest="http://themeforest.net/item/passion-modern-portfolio-html-template/589546?ref=unitedthemes">
+                            		Passion                                    <span class="html-tag">HTML</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/passion.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="GoGreen" data-fullscreen="http://themeforest.unitedthemes.com/themes/gogreen/" data-theme="gogreen" data-themeforest="http://themeforest.net/item/go-green-modern-business-html-template/476396?ref=unitedthemes">
+                            		GoGreen                                    <span class="html-tag">HTML</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/gogreen.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                            <li class="button_a">
+                            
+                            	<a href="#" data-themename="Strange" data-fullscreen="http://themeforest.unitedthemes.com/themes/strange/" data-theme="strange" data-themeforest="http://themeforest.net/item/strange-modern-portfolio-html-template/410933?ref=unitedthemes">
+                            		Strange                                    <span class="html-tag">HTML</span>
+                                </a>
+                                
+                                <img alt="" class="preview" src="images/products/strange.jpg" />
+                                
+                                                            
+                            </li>
+                            
+                                                        
+                        	</ul>
+                 		</li>	
+                 	</ul>
+                    
+            </div>
+        
+        </div>
+        
+        <iframe id="iframe" src="themes/lansing/rose/index.html" frameborder="0" width="100%"></iframe>
+    
+    </body>
+    
+    
+<!-- Mirrored from themeforest.unitedthemes.com/?theme=lansing by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 21 Oct 2013 03:31:44 GMT -->
+</html>
+    
+	

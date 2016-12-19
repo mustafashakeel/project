@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+		<title>Taskingpad - Tasking and Outsourcing System</title>
+        <link rel="stylesheet" type="text/css" href="fonts.googleapis.com/css?family=Kreon:400,700" />
+        <link rel="stylesheet" type="text/css" href="fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400italic,600,700,200italic" />
+        <link rel="stylesheet" type="text/css" href="netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/splash.css" />
+        <script type="text/javascript" src="/js/jquery.js"></script>
+        <script type="text/javascript" src="/js/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+        <script src="splash/js/jquery.validity.js" type="text/javascript"></script>
+        <script src="splash/js/jquery.waypoints.js" type="text/javascript"></script>
+        <script src="splash/js/jquery.stellar.js" type="text/javascript"></script>
+        <script src="splash/js/modernizr.js" type="text/javascript"></script>
+        <script src="splash/js/sumazi.validation.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // Chartbeat head code.
+            var _sf_startpt=(new Date()).getTime();
+            
+            // Facebook like.
+           // (function(d, s, id) {
+           // var js, fjs = d.getElementsByTagName(s)[0];
+            // if (d.getElementById(id)) return;
+            // js = d.createElement(s); js.id = id;
+            // js.src = "../connect.facebook.net/en_US/all.js#xfbml=1&appId=240011449361772";
+            // fjs.parentNode.insertBefore(js, fjs);
+            // }(document, 'script', 'facebook-jssdk'));
+            
+            // Twitter follow.
+            !function(d,s,id) {
+            var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js,fjs);}
+            }(document, 'script', 'twitter-wjs');
+            
+            // Page specific.
+            $(document).ready(function() {
+                var headerOffset = 214;
+                
+                // Parallax positioning.
+                $.stellar();
+                
+                // Setup scroll sections.
+                $('.section').waypoint({
+                    offset: headerOffset,
+                    handler: function(direction) {
+                        var id = $(this).attr('id');
+                        var links = $('a[href*="#"]');
+                        var link = $('a[href="#' + id + '"]');
+                        
+                        if(direction == 'up') {
+                            id = $(this).waypoint('prev').attr('id');
+                            link = $('a[href="#' + id + '"]');
+                        }
+                        
+                        links.removeClass('active');
+                        link.not('.btn').addClass('active');
+                        
+                        if(link.is('.btn')) {
+                            $('.blanks input:eq(0)').focus();
+                        }
+                    }
+                });
+                
+                // Animate section scrolling.
+                $('a[href*="#"]').click(function(event) {
+                    event.preventDefault();
+                    
+                    var url = this.href;
+                    var parts = url.split("#");
+                    var target = parts[1];
+                    
+                    var targetOffset = $('#' + target).offset();
+                    var targetTop = targetOffset.top - headerOffset;
+                    
+                    $('html, body').stop().animate({scrollTop: targetTop}, 800, 'linear');
+                });
+                
+                // Move join header.
+                var hero = $('section.hero');
+                var join = $('header .join');
+                var top = hero.offset().top;
+                var bottom = 287;
+                
+                // TODO: Fix issue where it is a few pixels off.
+                $(window).scroll(function() {
+                    var current = Math.ceil(hero.offset().top);
+                    var percentage = Math.floor((1 - (bottom - current)/(bottom - top)) * 100) / 100;
+                    
+                    if(percentage <= 1) {
+                        join.css({top: (join.outerHeight() * percentage) - 100 + 'px'});
+                    }
+                });
+                
+                // Submit information.
+                $('.btn.submit').click(function() {
+                    $.validity.start();
+                    $('.blanks input[name="name"]').require();
+                    $('.blanks input[name="company"]').require();
+                    $('.blanks input[name="title"]').require();
+                    $('.blanks input[name="email"]').require().match('email');
+                    var result = $.validity.end();
+                    
+                    if(result.valid) {
+                        $.ajax({
+                            url: 'http://api.sumazi.com/splash/signup',
+                            type: 'POST',
+                            data: {
+                                name: $('.blanks input[name="name"]').val(),
+                                company: $('.blanks input[name="company"]').val(),
+                                title: $('.blanks input[name="title"]').val(),
+                                email: $('.blanks input[name="email"]').val()
+                            },
+                            success: function(data, textStatus, xhr) {
+                                $('.blanks h1 span').text('Thanks!');
+                                $('.blanks p').text('We appreciate your interest.');
+                                $('.blanks .btn').css({visibility:'hidden'});
+                            },
+                            error: function(xhr, textStatus, errorThrown) {
+                                $('.blanks h1 span').text('Error.');
+                                $('.blanks p').text('It looks like something went wrong. Please try again later.');
+                                $('.blanks .btn').css({visibility:'hidden'});
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+	</head>
+	<body>
+	    <div id="fb-root"></div>
+	    <div id="main">
+            <header>
+                <div id="bar" class="navbar navbar-fixed-top">
+                    <nav class="navbar-inner wrapper">
+                        <div id="brand">
+                            <div class="brand"><div class="logo access">Tasking Pad</div></div>
+                        </div>
+                        <ul class="nav pull-right">
+                            <li class="link"><a href="#about">About</a></li>
+                            <li class="link last"><a href="#team">Team</a></li>
+                            <li class="divider-vertical"></li>
+                            <li class="link last"><a href="http://blog.sumazi.com/" target="_blank">Blog</a></li>
+                            <li class="link last"><a href="loginhtml.html">Login</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="join">
+                    <div class="wrapper">
+                        <div class="messaging">
+                	        <h1>Unlimited <span>Data-Driven</span> Possibilities.</h1>
+                	        <h2>To be unveiled soon&hellip; the smartest social data platform for businesses.</h2>
+                	        <a href="#join" class="btn btn-huge btn-primary sign-up last bottom">Sign Up</a>
+                	   </div>
+                    </div>
+                </div>
+            </header>
+    	    <section class="hero" data-stellar-ratio=".6">
+    	        <div id="landscape" class="landscape wrapper">
+    	            <div class="cloud left"></div>
+    	            <div class="cloud right"></div>
+    	            <div class="messaging">
+            	        <h1>Unlimited <span>Data-Driven</span> Possibilities.</h1>
+            	        <h2>To be unveiled soon&hellip; the smartest social data platform for businesses.</h2>
+            	        <a href="#join" class="btn btn-huge btn-primary sign-up last bottom">Sign Up</a>
+            	        <p>Sumazi helps global enterprises and brands transform their communities into their customers and connectors. 
+            	        If you&rsquo;re interested in learning more, sign up for early access.</p>
+            	   </div>
+    	        </div>
+            </section>
+            <section class="continuation">
+                <div class="tear"></div>
+                <div id="about" class="about section">
+                    <div class="wrapper row">
+                        <div class="nodes"></div>
+                        <div class="bg"></div>
+                        <div class="graphic"></div>
+                        <div class="block pull-right">
+                            <h1>About Sumazi</h1>
+                            <p>The average enterprise-level company owns 178 social media accounts, with 13 different departments &mdash; 
+                            including marketing, sales and human resources &mdash; actively engaging in social media. But these businesses are 
+                            <b>just sitting on this incredibly valuable and under-utilized data</b> about the people in their networks. 
+                            They have tens of thousands to millions of Twitter followers, Facebook fans, email addresses and their own 
+                            social data they&rsquo;ve collected, but often have no idea who these people are, who they need to connect with or 
+                            how to leverage their extended networks.</p>
+                            <p>Sumazi is the smartest social data platform for global enterprises and brands. It is designed to help professionals 
+                            across multiple departments leverage the valuable collective data that exists at their company. By doing so, Sumazi is 
+                            breaking down the social data knowledge silos that exist at every large company.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="team" class="team section">
+                    <div class="wrapper row">
+                        <div class="bg"></div>
+                        <div class="graphic"></div>
+                        <div class="block pull-right">
+                            <h1>The Team</h1>
+                            <p>Sumazi is made up of a strong enterprise-experienced team comprised of former employees from Sun Microsystems, 
+                            VMWare, Cisco Systems, DDB Worldwide and the Disney Corporation.</p>
+                            <p>It was founded by Sumaya Kazi, a UC Berkeley alumna who led Global Social Media at Sun Micrososystems as one of the first 
+                            social media strategists at a Fortune 500 company. She is a recognized thought leader in the Enterprise and Business Social space. 
+                            Sumaya has been featured by BusinessWeek Magazine as one of &ldquo;America&rsquo;s Best Young Entrepreneurs&rdquo; and most 
+                            recently by Reuters as one of the top 50 &ldquo;Most Influential Executives on the Web.&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="join" class="join section">
+                    <div class="wrapper row">
+                        <div class="node"></div>
+                        <div class="bg"></div>
+                        <div class="graphic"></div>
+                        <div class="row">
+                            <div class="block pull-right">
+                                <h1>Sign Up for Early Access</h1>
+                                <p>Sumazi currently is working with an invite-only network of top enterprises and brands that are using its technology.</p>
+                                <p>Sumazi will be soon unveiling its social data intelligence platform. If you&rsquo;re interested in learning more before we launch, 
+                                please sign up and tell us a little more about yourself and we&rsquo;ll be in touch soon.</p>
+                            </div>
+                        </div>
+                        <div class="blanks">
+                            <h1><span>Hello.</span></h1>
+                            <p>My name is <input type="text" name="name" class="large" placeholder="full name &hellip;" />. 
+                            I work at <input type="text" name="company" class="large" placeholder="company name &hellip;" /> 
+                            as a <input type="text" name="title" class="large" placeholder="title &hellip;" /><br /> and I&rsquo;d love to learn more about Sumazi. 
+                            You can reach me at <input type="text" name="email" class="large" placeholder="work email &hellip;" />.</p>
+                            <a href="javascript:void(0)" class="btn btn-huge btn-primary submit" style="width:365px">Submit</a>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="social">
+                        <a href="https://twitter.com/Sumazi" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @Sumazi</a>&nbsp;&nbsp;
+                        <div class="fb-like" data-href="https://www.facebook.com/sumazi" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                    </div>
+                    <div class="news">
+                        <div class="logos"></div>
+                    </div>
+                    <div class="pride">
+                        <p>Made with <span class="love"></span> in San Francisco.</p>
+                    </div>
+                </footer>
+            </section>
+        </div>
+           
+	</body>
+</html>
+
